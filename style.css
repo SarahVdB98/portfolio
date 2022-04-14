@@ -49,7 +49,7 @@ nav a.active{
 }
 
 #container1{   
-    background-image: url(./images/htmlTrans.png);
+    background-image: url(images/htmlTrans.png);
     width: 50%;
     color: white;
     float: left;
@@ -59,24 +59,24 @@ nav a.active{
     
 }
 #container1:hover{   
-    background-image: url(./images/html.png);  
+    background-image: url(images/html.png);  
     font-size: xx-large;  
 }
 #container2:hover{   
-    background-image: url(./images/download.png);
+    background-image: url(images/download.png);
     font-size: xx-large;    
 }
 #container3:hover{   
-    background-image: url(./images/AI.jpg); 
+    background-image: url(images/AI.jpg); 
     font-size: xx-large;   
 }
 #container4:hover{   
-    background-image: url(./images/APi.png); 
+    background-image: url(images/APi.png); 
     font-size: xx-large;   
 }
 
 #container2{   
-    background-image: url(./images/downloadTrans.png);
+    background-image: url(images/downloadTrans.png);
     width: 50%;
     color: white;
     float: left;
@@ -85,7 +85,7 @@ nav a.active{
     font-size: x-large;
 }
 #container3{   
-    background-image: url(./images/AITrans.jpg);
+    background-image: url(images/AITrans.jpg);
     width: 50%;
     color: white;
     float: left;
@@ -94,7 +94,7 @@ nav a.active{
     font-size: x-large;
 }
 #container4{   
-    background-image: url(./images/APiTrans.png);
+    background-image: url(images/APiTrans.png);
     width: 50%;
     color: white;
     float: left;
