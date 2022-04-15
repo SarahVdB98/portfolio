@@ -1,0 +1,48 @@
+first styling:
+
+nav {
+    overflow: hidden;
+    background-color: dodgerblue;
+}
+
+nav .rightnav a {
+    text-decoration: none;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    float: right;
+    font-size: 15px;
+    font-weight: 200;
+}
+nav .leftnav a {
+    text-decoration: none;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    float: left;
+    font-size: 17px;
+    font-weight: 200;
+}
+
+
+nav .rightnav a:hover{
+    background-color: white;
+    color: black;
+    font-size: 17px;
+}
+nav a.active{
+    background-color: deepskyblue;
+    color: black;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 1000;
+}
+
+.burger-menu {
+    color: var(--primary-color);
+    font-size: 17px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }

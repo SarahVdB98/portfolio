@@ -1,113 +1,194 @@
-header, footer {
-    padding: 10px;
-    background-color: black;
-    color: aliceblue;
-    text-align: center;
-}
-
-nav {
-    overflow: hidden;
+header, body, footer {
     background-color: dodgerblue;
-}
-
-nav .rightnav a {
-    text-decoration: none;
     color: aliceblue;
     text-align: center;
-    padding: 14px 16px;
-    float: right;
-    font-size: 15px;
-    font-weight: 200;
 }
-nav .leftnav a {
-    text-decoration: none;
-    color: aliceblue;
-    text-align: center;
-    padding: 14px 16px;
-    float: left;
-    font-size: 17px;
-    font-weight: 200;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #4756df;
+  --primary-color: #fcfcfc;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
 }
 
 
-nav .rightnav a:hover{
-    background-color: white;
-    color: black;
-    font-size: 17px;
-}
-nav a.active{
-    background-color: deepskyblue;
-    color: black;
-    font-size: 17px;
-    font-style: italic;
-    font-weight: 1000;
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-#container1{   
-    background-image: url(images/htmlTrans.png);
+nav h1 {
+    color: var(--primary-color);
+  }
+  
+  nav a {
+    color: var(--primary-color);
+    transition: var(--transition);
+  }
+  nav a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.9rem;
+  }
+  
+  nav ul li {
+    font-weight: var(--bold-font);
+  }
+
+  .burger-menu {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+  }  
+
+  .cont{
     width: 50%;
     color: white;
     float: left;
     text-align: center;
     height: 450px;
-    font-size: x-large;
-    
-}
-#container1:hover{   
-    background-image: url(images/html.png);  
-    font-size: xx-large;  
-}
-#container2:hover{   
-    background-image: url(images/download.png);
-    font-size: xx-large;    
-}
-#container3:hover{   
-    background-image: url(images/AI.jpg); 
-    font-size: xx-large;   
-}
-#container4:hover{   
-    background-image: url(images/APi.png); 
-    font-size: xx-large;   
+    font-size: x-large; 
+  }
+
+ #container1{   
+    background-image: url(images/htmlTrans.png);  
 }
 
 #container2{   
     background-image: url(images/downloadTrans.png);
-    width: 50%;
-    color: white;
-    float: left;
-    text-align: center;
-    height: 450px;
-    font-size: x-large;
 }
+
 #container3{   
     background-image: url(images/AITrans.jpg);
-    width: 50%;
-    color: white;
-    float: left;
-    text-align: center;
-    height: 450px;
-    font-size: x-large;
 }
+
 #container4{   
     background-image: url(images/APiTrans.png);
-    width: 50%;
-    color: white;
-    float: left;
-    text-align: center;
-    height: 450px;
-    font-size: x-large;
+}
+
+
+.cont:hover{
+    font-size: xx-large; 
+}
+
+#container1:hover, #container2:hover, #container3:hover, #container4:hover {   
+    background-image: url(images/html.png);   
+}
+#container2:hover{   
+    background-image: url(images/download.png);
+}
+#container3:hover{   
+    background-image: url(images/AI.jpg);  
+}
+#container4:hover{   
+    background-image: url(images/APi.png); 
 }
 
 .text{
     padding-top: 200px;
     position: relative;
-    color: white;
 }
 .text p{
+    text-align: center;
     color: white;
 }
 
 body {
     background-color: grey;
     color: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        position: fixed;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        top: 86px;
+        left: 20%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+      }
+    
+       nav ul li {
+        margin: 8px;
+      }
+
+      .burger-menu {
+          display: block;
+      }
+
+      nav ul.show{
+          transform: translateX(0);
+      }
+    
+      #container1, #container2, #container3, #container4 {
+          float: none;
+          width: 100%;
+      }
+      .text p {
+        text-align: center;
+      }
+    
 }
